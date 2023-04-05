@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css">
     <title>Prework Study Guide</title>
   </head>
   <body>
@@ -15,7 +16,7 @@
       <section class="card" id="html-section">
         <h2>HTML</h2>
         <ul>
-          <li><strong>HTML</strong> gives the content of the webpage a structure.</li>
+          <li><strong>HTML</strong>(Hypertext Markup Language) gives the content of the webpage a structure.</li>
           <li>Before the html element we have the declaration <strong>!DOCTYPE html</strong> to show browser type of doc.</li>
           <li>html element can include attribute <strong>lang="en"(english)</strong>, HTML attributes define additional info to element</li>
           <li>The <strong>head</strong> element contains information about the webpage (for the browser).</li>
@@ -43,25 +44,52 @@
       <section class="card" id="css-section">
         <h2>CSS</h2>
         <ul>
-          <li>Enter your CSS notes here</li>
+          <li><strong>CSS</strong> (Cascading style sheets) gives the content of a webpage style with (colors, aesthetics, visual layout and organization) <br />
+          and defines style rules for specific elements of an HTML page and format them using wide range of style options</li>
+          <li><strong>3</strong> ways to use CSS: <strong>Inline CSS</strong>(use style attribute on specific HTML element), <strong>internal style sheet</strong>(embeds style element in head element
+          one change in CSS rule applies to all tagged page elements), <strong>external style sheet</strong>(preferred in most cases, allows developers to work on seperate file)</li>
+          <li>external stylesheet will be linked with <strong>link</strong> element and attributes <strong>rel</strong>="stylesheet" (relation between HTML and external CSS sheet) and <br />
+          <strong>href</strong>="URL" <strong>(seperation of concerns)</strong></li>
+          <li><strong>CSS rules</strong> consist of: <strong>selector</strong>(element to style), and <strong>Declaration block</strong>(in curled braces with unlimited declarations)</li>
+          <li><strong>Declarations</strong> consist of two elements: <strong>Property</strong>(e.g. color or text-align) and <strong>Value</strong> (each property holds a value, e.g. blue, center)</li>
+          <li><strong>CSS classes and IDs:</strong> identify elements, class allow us to share CSS rule to any chosen element (.class as selector)</li>
+          <li>one declaration block can have several selectors, <strong>DRY</strong>(Do not repeat yourself, reuse and share pieces of code)</li>
+          <li><strong>text-align:</strong> Right, Center, Left, justify</li>
+          <li><strong>font-size, font-color, font-family, font-weight, font-style etc.:</strong> examples 20px, blue, Helvetica, bold, italic</li>
+          <li><strong>display:</strong> block (each element start on new line), inline (all elements in the same line)</li>
+          <li>A <strong>margin</strong> indicates how much space we want around the outside of an element.</li>
+          <li>A <strong>padding</strong> indicates how much space we want around the content inside an element.</li>
+          <li>An element can have a <strong>border</strong> around it, with the size value, with <em>solid</em> it becomes visible and with color you can determine the color </li>
+          <li>colors can be either just blue, grey etc. or it can have <strong>Hex-codes</strong> which begin with # and a combination of numbers and letters with 6 characters</li>
+          <li>3 primary Hex colors are <strong>Red</strong>(#FF0000), <strong>Green</strong>(#00FF00) and <strong>Blue</strong>(#0000FF)</li>
+          <li><strong>CSS Box Model:</strong> every HTML essentially a box, starts with margin outside, border, padding and content of element </li>
+          <li><strong>Box-shadow:</strong> x-axis(to the right), y-axis(to the left) and color</li>
         </ul>
       </section>
 
       <section class="card" id="git-section">
         <h2>Git</h2>
         <ul>
+          <li><strong>Git</strong> is a version control tool that let`s us revert back to different versions of our code without breaking our main code</li>
+          <li><strong>Github</strong> is a cloud-based website that let`s us collaborate with other developers using version control with Git</li>
+          <li>A <strong>branch</strong> is a copy or version of code that can be worked on independently in isolation without overwriting our team members code</li>
+          <li><strong>main(master) branch</strong> is our default version of code, which can be updated with <strong>feature- or development-branches</strong>, which are copies of default branch</li>
+          <li>Those can be <strong>merged</strong> back into the main branch, after change is completed</li>
           <li><strong>git status:</strong> checks what branch we are currently on</li>
           <li><strong>git checkout -b branch-name:</strong> creates a new branch and switches to it</li>
           <li><strong>git add -A:</strong> adds all modifications in current working directory to the staging area of Git ready for commit</li>
           <li><strong>git commit –m [commit message]:</strong> descriptive commit message in imperative; max 50 characters, should be less; snapshot of currently staged changes</li>
-          <li><strong>git pull origin main:</strong> look if base branch is in sync with Github base branch, make sure to have latest version of project on local computer, not outdated <br />
+          <li><strong>git pull origin main:</strong> look if local base branch is in sync with Github base branch, make sure to have latest version of project on local computer, not outdated <br />
           (if a team member pushes changes to main branch, we always want to have the <strong>most updated version</strong> in our local branch to prevent sync issues)</li>
           <li><strong>git push origin [branch-name]:</strong> (if feature-branch name: feature/branch-name) push changes from local to remote Git branch</li>
-          <li><strong>Visit GitHub website</strong> to compare and create <strong>pull request</strong>, click green button</li>
-          <li>Descriptive PR title, instructions for team members reviewing on changes made, how feature is supposed to function and how to start app so feature can be tested</li>
-          <li>Designate <strong>base branch</strong> as main, and <strong>comparison branch</strong> as local branch, because local branch will merge into main</li>
+          <li><strong>Visit GitHub website</strong> to compare and create <strong>pull request (PR)</strong>, click green button</li>
+          <li>Descriptive PR  title, instructions for team members reviewing on changes made, how feature is supposed to function and how to start app so feature can be tested</li>
+          <li>Designate <strong>base branch</strong> as main, and <strong>comparison branch</strong> as local (feature) branch, because local branch will merge into main</li>
           <li><strong>Create PR</strong></li>
-          <li>Usually request one or two team members to view PR, after that <strong>“Merge PR”</strong>
+          <li>Usually request one or two team members to view PR, after that <strong>“Merge PR”</strong></li>
+          <li><strong>Update</strong> local main branch with remote branch with: git pull origin main</li>
+          <li>Delete feature-branch after to prevent accidently reusing old branches: <strong>git branch -D [branch-name]</strong></li>
+          <li>This is the usual <strong>GitHub workflow</strong></li>
         </ul>
       </section>
 
